@@ -1,0 +1,19 @@
+/* tiles */
+#white{
+    padding : 12px;
+    textAlign : center;
+    border : 1px solid #60D269;
+    fontFamily : Helvetica;
+    fontWeight : bolder;
+    color : #041005;
+    backgroundColor : #60D269;
+}
+#black{
+    padding : 12px;
+    textAlign : center;
+    border : 1px solid #041005;
+    fontFamily : Helvetica;
+    fontWeight : bolder;
+    color : #60D269;
+    backgroundColor : #041005;
+}
