@@ -1,19 +1,33 @@
 /* tiles */
-#white{
+td{
+    height : 50px;
+    width : 50px;
     padding : 12px;
     textAlign : center;
-    border : 1px solid #60D269;
     fontFamily : Helvetica;
     fontWeight : bolder;
-    color : #041005;
-    backgroundColor : #60D269;
+    border : 1px solid;
 }
-#black{
-    padding : 12px;
-    textAlign : center;
-    border : 1px solid #041005;
-    fontFamily : Helvetica;
-    fontWeight : bolder;
+
+.white{
+    color : #041005;
+    border-color: #60D269;
+    background-Color : #60D269;
+}
+.black{
     color : #60D269;
-    backgroundColor : #041005;
+    border-color: #041005;
+    background-Color : #041005;
+}
+#highlighted{
+    border-color: #43eaea;
+}
+body{
+    background-color: #041005;
+}
+
+table{
+    border: 2px solid #60D269;
+    margin-left: auto;
+    margin-right: auto;
 }

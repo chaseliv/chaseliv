@@ -16,6 +16,7 @@ body.style.backgroundColor = currentDark;
 
 //Table
 let table = document.createElement("table");
+let table = document.getElementsByTagName("table");
 table.style.tableLayout = "fixed";
 table.style.width = "100px";
 body.appendChild(table);
@@ -25,6 +26,7 @@ console.log("Made the table");
 let tableBody = document.createElement("tbody");
 body.appendChild(tableBody);
 console.log("Made the tablebody");
+
 
 
 let clickedCell = document.createElement('td');
@@ -42,7 +44,19 @@ function createBoard(isWhite) {
         tableBody.style.backgroundColor = currentDark;
 
         for (let j = 0; j < 8; j++) {
-            let tile = Tile.constructor(i, j);
+            let tile;
+            try {
+                tile = Tile.constructor(i, j);
+            } catch (e) {
+                console.error(e instanceof SyntaxError); // true
+                console.error(e.message);                // Hello
+                console.error(e.name);                   // SyntaxError
+                console.error(e.lineNumber);             // 10
+                console.error(e.columnNumber);           // 0
+                console.error(e.stack);                  // @debugger eval code:3:9
+            }
+            let test = null;
+
             tile.cell_ = document.createElement("td");
             let cellNum = document.createTextNode(i + ", " + j);
 
