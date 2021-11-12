@@ -2,25 +2,29 @@
 //functions
 function createBoard(isWhite) {
     for (let i = 0; i < 8; i++) { //TODO does this need to be moved?
-        Board.tiles_[i] = [];
-        Board.validMoves_[i] = [];
+
     }
 
     let rowNum = 8;
     let colNum = rowNum;
     let tileCounter;
+
     if (isWhite) {
         tileCounter = 1;
     } else {
         tileCounter = 0;
     }
+
     for (let i = 0; i < rowNum; i++) {
+        Board.tiles_[i] = [];
+        Board.validMoves_[i] = [];
         let row = document.createElement("tr");
         tbody.appendChild(row);
         for (let j = 0; j < colNum; j++) {
             let tile = new Tile(i, j);
             tile.cell_ = document.createElement("td");
             tile.cell_.onclick = function() { handleMouseClick(tile); }
+            tile.cell_.setAttribute("id", i + "," + j);
             row.appendChild(tile.cell_);
 
             // let cords = document.createTextNode(i + ", " + j);
@@ -32,6 +36,7 @@ function createBoard(isWhite) {
                 tile.cell_.setAttribute("class", "black");
 
             }
+
             tileCounter++;
             Board.tiles_[i][j] = tile;
         }
@@ -111,12 +116,8 @@ function removeHighLights(){
 
 class Board{
     static tiles_ = new Array(8);
-    static isTileSelected_ = false;
     static currentPiece_ = null;
     static validMoves_ = new Array(8);
-    static start_ = null;
-    static end_ = null;
-
 }
 
 
