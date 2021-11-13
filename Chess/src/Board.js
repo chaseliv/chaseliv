@@ -1,10 +1,6 @@
 "use strict"
 //functions
 function createBoard(isWhite) {
-    for (let i = 0; i < 8; i++) { //TODO does this need to be moved?
-
-    }
-
     let rowNum = 8;
     let colNum = rowNum;
     let tileCounter;
@@ -122,8 +118,8 @@ class Board{
 
 
 let body = document.body;
-let table = document.getElementsByTagName("table")[0];
-let tbody = document.getElementsByTagName("tbody")[0];
+let table = document.getElementById("table");
+let tbody = document.getElementById("tbody");
 let row = document.createElement("tr");
 tbody.appendChild(row);
 

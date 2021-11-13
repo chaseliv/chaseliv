@@ -4,12 +4,14 @@ class Tile {
     constructor(xPos, yPos) {
         this.xPos_ = xPos;
         this.yPos_ = yPos;
+        this.cellId_ = xPos + ", " +yPos;
         this.piece_ = null;
-        this.cell_ = null;
-        this.child_ =null;
+        this.cell_ = document.getElementById(this.cellId_ );
+        this.cellChild_ = null;
     }
 
     getPiece() {
+        this.removePiece()
         return this.piece_;
     }
 
@@ -20,15 +22,7 @@ class Tile {
     }
 
     setPiece(piece) {
-        if (this.piece_ != null) {
-            this.removePiece();
-            this.piece_ == null;
-        }
-        this.piece_ = piece;
-        // this.piece_.timesMoved_++;
 
-        this.child_ = document.createTextNode("pawn");
-        this.cell_.appendChild(this.child_); //this needs to be piece.child_ (which is the image)
     }
 
     getX() {
@@ -37,5 +31,9 @@ class Tile {
 
     getY() {
         return this.yPos_;
+    }
+
+    getCellId(){
+        return this.cellId_;
     }
 }
