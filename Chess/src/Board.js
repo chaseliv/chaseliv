@@ -10,7 +10,6 @@ function createBoard(isWhite) {
     } else {
         tileCounter = 0;
     }
-
     for (let i = 0; i < rowNum; i++) {
         Board.tiles_[i] = [];
         Board.validMoves_[i] = [];

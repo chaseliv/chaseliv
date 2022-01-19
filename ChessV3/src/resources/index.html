@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chess</title>
+</head>
+<body>
+<div id="chessboard">
+    <script type="text/javascript" src="GlobalVariables.js"></script>
+    <script type="text/javascript" src="Moves.js"></script>
+    <script type="text/javascript" src="board.js"></script>
+</div>
+<div id="chatApp">
+    <header>
+        <textarea id="userNameTA" class="topTA">Username...</textarea>
+        <button id="joinGameBtn">Join Game</button>
+    </header>
+    <div id="messages">
+    </div>
+    <div id="footer">
+        <textarea id="sendMessageTA"> Message...</textarea>
+        <button id="sendMessageBtn">Send</button>
+    </div>
+    <script type="text/javascript" src="websocket.js"></script>
+</div>
+</body>
+</html>

@@ -7,7 +7,6 @@ class Tile {
         this.cellId_ = xPos + ", " +yPos;
         this.piece_ = null;
         this.cell_ = document.getElementById(this.cellId_ );
-        this.cellChild_ = null;
     }
 
     getPiece() {
@@ -22,7 +21,8 @@ class Tile {
     }
 
     setPiece(piece) {
-
+        this.piece_ = piece;
+        this.cell_.appendChild(this.piece_.getImageNode());
     }
 
     getX() {

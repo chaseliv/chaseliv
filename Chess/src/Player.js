@@ -3,15 +3,23 @@ class Player{
         this.piece_ = null;
         this.isWhite_ = isWhite;
     }
-    setPiece(piece){
+    setDownPiece(piece){
         this.piece_ = piece;
         this.piece_.get
     }
-    getPiece(){
+    pickUpPiece(){
         let temp = this.piece_;
         this.piece_ = null;
         // remove child from the player
         return temp;
+    }
+    hasPiece(){
+        if(this.piece_ == null){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
 }

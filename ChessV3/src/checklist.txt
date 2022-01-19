@@ -1,0 +1,8 @@
+
+
+Todo:
+chat client part
+finish move validation
+    check
+    king in danger
+Java server

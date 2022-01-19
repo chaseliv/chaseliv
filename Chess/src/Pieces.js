@@ -70,28 +70,28 @@ class Pawn extends Piece {
                 console.log("\t1. " + (row - 2) + ", " + col);
             }
         }
-        catch (e) {/*outofboudns*/}
+        catch (e) {/*out of bounds*/}
         try {
             if (Board.tiles_[row - direction][col].getPiece() == null) {
                 validMoves[row - direction][col] = true;
                 console.log("\t1. " + (row - 1) + ", " + col);
             }
         }
-        catch (e) {/*outofboudns*/}
+        catch (e) {/*out of bounds*/}
         try {
             if (Board.tiles_[row - direction][col - 1].getPiece() != null) {
                 validMoves[row - direction][col - 1] = true;
                 console.log("\t1. " + (row - 1) + ", " + (col - 1));
             }
         }
-        catch (e) {/*outofboudns*/}
+        catch (e) {/*out of bounds*/}
         try {
             if (Board.tiles_[row - direction][col + 1].getPiece() != null) {
                 validMoves[row - direction][col - 1] = true;
                 console.log("\t1. " + (row - 1) + ", " + (col + 1));
             }
         }
-        catch (e) {/*outofboudns*/}
+        catch (e) {/*out of bounds*/}
 
         return validMoves;
     }
